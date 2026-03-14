@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306528846589",
+    "project_id": "cafe-house-6bd6a",
+    "storage_bucket": "cafe-house-6bd6a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306528846589:android:35b73eeec73a96d4abb494",
+        "android_client_info": {
+          "package_name": "br.me.vitorcsouza.cafe_house"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChOArsoK8zqBanwiahL6CecmGZ8slh6aM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

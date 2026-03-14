@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cafe_House</string>
+
+    <string name="coffee_house">Coffee\n<font color="#F1953e">H</font>ouse</string>
+    <string name="get_started">Faça seu Pedido</string>
+    <string name="coffee_house2">Coffee<font color="#F1953e">H</font>ouse</string>
+    <string name="search_anything">Pesquise qualquer coisa</string>
+    <string name="special_for_you">Especial para você</string>
+    <string name="list">Lista</string>
+    <string name="description">Descrição</string>
+    <string name="coffee_size">Coffee Tamanho</string>
+    <string name="price">Preço</string>
+    <string name="_0">R$ 0</string>
+    <string name="buy_now">Comprar Agora</string>
+</resources>

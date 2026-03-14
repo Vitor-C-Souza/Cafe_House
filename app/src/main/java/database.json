@@ -1,0 +1,31 @@
+{
+  "Banner": {
+    "item1": {
+      "url": "link_da_imagem_aqui"
+    }
+  },
+  "Category": {
+    "cat1": {
+      "id": 1,
+      "name": "Coffee",
+      "picUrl": "link_aqui"
+    }
+  },
+  "Items": {
+    "prod1": {
+      "title": "Exemplo",
+      "price": 10,
+      "rating": 4.5
+    }
+  },
+  "Popular": {
+    "p1": {
+      "itemId": "prod1"
+    }
+  },
+  "Special": {
+    "s1": {
+      "itemId": "prod1"
+    }
+  }
+}
