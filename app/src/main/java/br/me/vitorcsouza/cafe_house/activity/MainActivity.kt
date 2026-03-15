@@ -1,10 +1,11 @@
-package br.me.vitorcsouza.cafe_house
+package br.me.vitorcsouza.cafe_house.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import br.me.vitorcsouza.cafe_house.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

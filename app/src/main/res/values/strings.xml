@@ -3,7 +3,7 @@
 
     <string name="coffee_house">Coffee\n<font color="#F1953e">H</font>ouse </string>
     <string name="get_started">Faça seu Pedido</string>
-    <string name="coffee_house2">Coffee<font color="#F1953e">H</font>ouse</string>
+    <string name="coffee_house2">Coffee <font color="#F1953e">H</font>ouse</string>
     <string name="search_anything">Pesquise qualquer coisa</string>
     <string name="special_for_you">Especial para você</string>
     <string name="list">Lista</string>
@@ -13,4 +13,19 @@
     <string name="_0">R$ 0</string>
     <string name="buy_now">Comprar Agora</string>
     <string name="background_cafe">background grãos de café</string>
+    <string name="pesquise_qualquer_coisa">Pesquise qualquer coisa</string>
+    <string name="cafes_populares">Cafés populares</string>
+    <string name="categoria">Categoria</string>
+    <string name="ver_todos">Ver todos</string>
+    <string name="especial_para_voc">Especial para você</string>
+    <string name="explorar">Explorar</string>
+    <string name="explorar_icon">explorar icon</string>
+    <string name="carrinho">Carrinho</string>
+    <string name="carrinho_icon">carrinho icon</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="favoritos_icon">favoritos icon</string>
+    <string name="pedido_icon">pedido icon</string>
+    <string name="meus_pedidos">Meus Pedidos</string>
+    <string name="perfil_icon">perfil icon</string>
+    <string name="perfil">Perfil</string>
 </resources>

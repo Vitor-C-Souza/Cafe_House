@@ -1,4 +1,4 @@
-package br.me.vitorcsouza.cafe_house
+package br.me.vitorcsouza.cafe_house.activity
 
 import android.content.Intent
 import android.os.Bundle
