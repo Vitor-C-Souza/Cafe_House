@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewCategoria"
+                    android:id="@+id/recyclerViewCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -85,10 +85,10 @@
                     android:layout_height="wrap_content"
                     android:indeterminateTint="@color/orange"
                     android:indeterminateTintMode="src_in"
-                    app:layout_constraintBottom_toBottomOf="@+id/recyclerViewCategoria"
+                    app:layout_constraintBottom_toBottomOf="@+id/recyclerViewCategory"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/recyclerViewCategoria" />
+                    app:layout_constraintTop_toTopOf="@+id/recyclerViewCategory" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
