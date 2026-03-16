@@ -28,4 +28,8 @@
     <string name="meus_pedidos">Meus Pedidos</string>
     <string name="perfil_icon">perfil icon</string>
     <string name="perfil">Perfil</string>
+    <string name="titulo">Titulo</string>
+    <string name="voltar">Voltar</string>
+    <string name="lista">Lista</string>
+    <string name="back_icon">back icon</string>
 </resources>
