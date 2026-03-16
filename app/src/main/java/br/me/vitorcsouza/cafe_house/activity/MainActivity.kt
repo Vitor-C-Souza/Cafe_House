@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.me.vitorcsouza.cafe_house.adapter.CategoryAdapter
 import br.me.vitorcsouza.cafe_house.adapter.PopularAdapter
+import br.me.vitorcsouza.cafe_house.adapter.SpecialAdapter
 import br.me.vitorcsouza.cafe_house.databinding.ActivityMainBinding
 import br.me.vitorcsouza.cafe_house.viewmodel.MainViewModel
 
@@ -36,7 +37,19 @@ class MainActivity : AppCompatActivity() {
 
         initCategory()
         initPopular()
+        initSpecial()
     }
+
+    private fun initSpecial() {
+        binding.progressBarSpecial.visibility = View.VISIBLE
+        viewModel.loadSpecial().observe(this) { itens ->
+            binding.recyclerViewSpecial.layoutManager =
+                LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            binding.recyclerViewSpecial.adapter = SpecialAdapter(itens)
+            binding.progressBarSpecial.visibility = View.GONE
+        }
+    }
+
 
     /**
      * Função responsável por carregar a lista de cafés populares
@@ -51,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             // 3. Define como a lista será organizada (neste caso, na vertical)
             binding.recyclerViewPopular.layoutManager =
                 LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-            
+
             // 4. Conecta o Adapter com a lista de itens recebida do Firebase para exibir na tela
             binding.recyclerViewPopular.adapter = PopularAdapter(itens)
 

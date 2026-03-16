@@ -21,4 +21,8 @@ class MainViewModel : ViewModel() {
         return repository.loadPopular()
     }
 
+    fun loadSpecial(): LiveData<MutableList<Item>> {
+        return repository.loadSpecial()
+    }
+
 }
