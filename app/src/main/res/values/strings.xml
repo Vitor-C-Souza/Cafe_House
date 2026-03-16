@@ -32,4 +32,16 @@
     <string name="voltar">Voltar</string>
     <string name="lista">Lista</string>
     <string name="back_icon">back icon</string>
+    <string name="texto">texto</string>
+    <string name="r">R$-</string>
+    <string name="plus_icon">plus icon</string>
+    <string name="coffee_tamanho">Coffee Tamanho</string>
+    <string name="_1">1</string>
+    <string name="minus_icon">minus icon</string>
+    <string name="extra">extra</string>
+    <string name="_00">0</string>
+    <string name="descricao">Descrição</string>
+    <string name="icon_star">icon star</string>
+    <string name="icon_favorite">icon favorite</string>
+    <string name="price_format">R$ %s</string>
 </resources>

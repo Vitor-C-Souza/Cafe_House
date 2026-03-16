@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo Circular Marrom -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/brown" />
+            <size android:width="32dp" android:height="32dp" />
+        </shape>
+    </item>
+
+    <!-- Ícone de Menos (-) Branco -->
+    <item
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:tint="@color/white"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M19,13H5v-2h14V13z" />
+        </vector>
+    </item>
+</layer-list>
