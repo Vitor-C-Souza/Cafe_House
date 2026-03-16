@@ -44,4 +44,5 @@
     <string name="icon_star">icon star</string>
     <string name="icon_favorite">icon favorite</string>
     <string name="price_format">R$ %s</string>
+    <string name="coffee_image">coffee image</string>
 </resources>

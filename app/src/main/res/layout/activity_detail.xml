@@ -25,31 +25,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="510dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/picMain"
-                    android:layout_width="0dp"
-                    android:layout_height="430dp"
-                    android:layout_margin="16dp"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearanceOverlay="@style/CircleImageView"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                <eightbitlab.com.blurview.BlurTarget
+                    android:id="@+id/blurTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/backBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="48dp"
-                    android:drawablePadding="8dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/voltar"
-                    android:textColor="@color/white"
-                    app:drawableStartCompat="@drawable/back"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/picMain"
+                            android:layout_width="0dp"
+                            android:layout_height="430dp"
+                            android:layout_margin="16dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/CircleImageView"
+                            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                        <TextView
+                            android:id="@+id/backBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="48dp"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/voltar"
+                            android:textColor="@color/white"
+                            app:drawableStartCompat="@drawable/back"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </eightbitlab.com.blurview.BlurTarget>
 
                 <eightbitlab.com.blurview.BlurView
                     android:id="@+id/blurView"
@@ -59,10 +70,11 @@
                     android:layout_marginEnd="32dp"
                     android:background="@drawable/blur_background"
                     app:blurOverlayColor="#10ffffff"
-                    app:layout_constraintBottom_toBottomOf="@+id/picMain"
-                    app:layout_constraintEnd_toEndOf="@+id/picMain"
-                    app:layout_constraintStart_toStartOf="@+id/picMain"
-                    app:layout_constraintTop_toBottomOf="@+id/picMain">
+                    app:layout_constraintBottom_toBottomOf="@+id/blurTarget"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/blurTarget"
+                    app:layout_constraintVertical_bias="0.8">
 
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -124,7 +136,7 @@
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
                             app:layout_constraintStart_toEndOf="@+id/imageView11"
-                            app:layout_constraintTop_toTopOf="@+id/imageView11"/>
+                            app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </eightbitlab.com.blurview.BlurView>
