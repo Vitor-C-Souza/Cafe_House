@@ -45,4 +45,10 @@
     <string name="icon_favorite">icon favorite</string>
     <string name="price_format">R$ %s</string>
     <string name="coffee_image">coffee image</string>
+    <string name="meu_carrinho">Meu Carrinho</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="entrega">Entrega</string>
+    <string name="taxa_total">Taxa Total</string>
+    <string name="finalizar_compra">Finalizar compra</string>
+    <string name="carrinho_vazio">Seu carrinho está vazio</string>
 </resources>

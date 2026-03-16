@@ -2,10 +2,11 @@ package br.me.vitorcsouza.cafe_house.activity
 
 import android.os.Build
 import android.os.Bundle
-import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.me.vitorcsouza.cafe_house.R
 import br.me.vitorcsouza.cafe_house.adapter.SizeAdapter
@@ -15,7 +16,6 @@ import br.me.vitorcsouza.cafe_house.help.ManagmentCart
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import eightbitlab.com.blurview.RenderScriptBlur
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
@@ -27,6 +27,12 @@ class DetailActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         managmentCart = ManagmentCart(this)
 
