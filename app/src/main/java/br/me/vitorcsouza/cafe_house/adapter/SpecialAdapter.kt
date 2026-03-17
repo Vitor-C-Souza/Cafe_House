@@ -1,6 +1,5 @@
 package br.me.vitorcsouza.cafe_house.adapter
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,9 +10,8 @@ import br.me.vitorcsouza.cafe_house.databinding.ViewholderSpecialBinding
 import br.me.vitorcsouza.cafe_house.domain.Item
 import com.bumptech.glide.Glide
 
-class SpecialAdapter(val items: MutableList<Item>) :
+class SpecialAdapter(private val items: MutableList<Item>) :
     RecyclerView.Adapter<SpecialAdapter.Viewholder>() {
-    private lateinit var context: Context
 
     class Viewholder(val binding: ViewholderSpecialBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -22,7 +20,6 @@ class SpecialAdapter(val items: MutableList<Item>) :
         parent: ViewGroup,
         viewType: Int
     ): Viewholder {
-        context = parent.context
         val binding = ViewholderSpecialBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
@@ -31,13 +28,15 @@ class SpecialAdapter(val items: MutableList<Item>) :
 
     override fun onBindViewHolder(holder: Viewholder, position: Int) {
         val item = items[position]
+        val context = holder.itemView.context
+        
         holder.binding.titleTxt.text = item.title
         holder.binding.priceTxt.text =
             context.getString(R.string.price_format, item.price.toString())
         holder.binding.ratingBar.rating = item.rating.toFloat()
 
         if (item.picUrl.isNotEmpty()) {
-            Glide.with(holder.itemView.context)
+            Glide.with(context)
                 .load(item.picUrl[0])
                 .into(holder.binding.picMain)
         }

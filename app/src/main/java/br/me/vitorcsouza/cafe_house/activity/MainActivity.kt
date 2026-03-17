@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.me.vitorcsouza.cafe_house.adapter.CategoryAdapter
 import br.me.vitorcsouza.cafe_house.adapter.PopularAdapter
@@ -28,6 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Configuração para ocultar as barras automaticamente (Modo Imersivo)
+        val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
 
         // Configura o ajuste automático para as barras do sistema (StatusBar e NavigationBar)
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
