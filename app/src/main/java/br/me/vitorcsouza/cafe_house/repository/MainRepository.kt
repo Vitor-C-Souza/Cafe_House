@@ -112,4 +112,26 @@ class MainRepository {
         return listData
     }
 
+    fun loadCategoryItems(categoryId: String): LiveData<MutableList<Item>> {
+        val listData = MutableLiveData<MutableList<Item>>()
+        val ref = firebaseDatabase.getReference("Items")
+
+        val query = ref.orderByChild("categoryId").equalTo(categoryId)
+
+        query.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = mutableListOf<Item>()
+                for (child in snapshot.children) {
+                    val item = child.getValue(Item::class.java)
+                    item?.let { list.add(it) }
+                }
+                listData.value = list
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("MainRepository", "Erro ao carregar itens por categoria: ${error.message}")
+            }
+        })
+        return listData
     }
+}

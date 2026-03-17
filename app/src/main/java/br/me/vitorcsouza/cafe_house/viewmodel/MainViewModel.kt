@@ -25,4 +25,8 @@ class MainViewModel : ViewModel() {
         return repository.loadSpecial()
     }
 
+    fun loadItems(categoryId: String): LiveData<MutableList<Item>> {
+         return repository.loadCategoryItems(categoryId)
+    }
+
 }

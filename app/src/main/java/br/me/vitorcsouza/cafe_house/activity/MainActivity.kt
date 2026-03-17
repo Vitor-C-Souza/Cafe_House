@@ -1,5 +1,6 @@
 package br.me.vitorcsouza.cafe_house.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         initCategory()
         initPopular()
         initSpecial()
+        initBottomMenu()
     }
 
     private fun initSpecial() {
@@ -88,6 +90,12 @@ class MainActivity : AppCompatActivity() {
 
             // Esconde o ProgressBar após o carregamento terminar
             binding.progressBarCategory.visibility = View.GONE
+        }
+    }
+
+    private fun initBottomMenu() {
+        binding.cartBtn.setOnClickListener {
+            startActivity(Intent(this, CartActivity::class.java))
         }
     }
 }
